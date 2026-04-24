@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="lab1.css" />
+  </head>
+  <body>
+    <header>
+      <h1> Smart Event Dashboard</h1>
+    </header>
+
+    <main class="container">
+      <section class="card-panel">
+        <h2>Add New Event</h2>
+        <form id="eventForm">
+          <div class="input-group">
+            <label>Event Title:</label>
+            <input
+              type="text"
+              id="eventTitle"
+              required
+              placeholder="Enter event name..."
+            />
+          </div>
+          <div class="input-group">
+            <label>Event Date:</label>
+            <input type="date" id="eventDate" required />
+          </div>
+          <div class="input-group">
+            <label>Category:</label>
+            <select id="eventCategory">
+              <option value="Conference">Conference</option>
+              <option value="Workshop">Workshop</option>
+              <option value="Social">Social</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Description:</label>
+            <textarea
+              id="eventDescription"
+              rows="3"
+              placeholder="Brief details..."
+            ></textarea>
+          </div>
+          <button type="submit" id="addBtn">Add Event</button>
+        </form>
+      </section>
+
+      <section class="card-panel">
+        <div class="header-row">
+          <h2>My Events</h2>
+          <div class="controls">
+            <button id="clearAll" class="btn-alt">Clear All Events</button>
+            <button id="addSample" class="btn-alt">Add Sample Events</button>
+          </div>
+        </div>
+        <div id="eventList" class="event-grid">
+          <p class="empty-msg">No events yet. Add your first event!</p>
+        </div>
+      </section>
+    </main>
+
+    <section class="container">
+      <div class="card-panel demo-box">
+        <h2>DOM Manipulation Demo</h2>
+        <p><strong>innerText vs innerHTML vs textContent</strong></p>
+        <div id="demoText" class="demo-area">
+          Original HTML: <span><strong>Bold Text</strong> with spaces </span>
+        </div>
+        <div id="demoOutput" class="output-log">
+          <em>Interaction log will appear here...</em>
+        </div>
+      </div>
+    </section>
+    <script src="lab1.js"></script>
+  </body>
+</html>
