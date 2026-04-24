@@ -1,0 +1,123 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1137; /* Dark blue background from reference */
+    color: #fff; /* White text for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* --- Container and Card Layout --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    gap: 20px; /* Space between cards */
+}
+
+/* Base style for all card modules */
+.card {
+    background: #fff; /* White background for all cards */
+    color: #333; /* Dark text inside cards */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the card */
+    border: 1px solid #ddd;
+}
+
+/* Define widths for the top two cards */
+.search-box {
+    flex: 2; /* Takes up 2/3 of the row */
+    min-width: 300px;
+}
+
+#weatherResult {
+    flex: 1; /* Takes up 1/3 of the row */
+    min-width: 300px;
+}
+
+/* --- Search and History Styles --- */
+.card h2 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 10px;
+    width: calc(100% - 100px); /* Fill space, leaving room for button */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #ff6f3c; /* Orange color from reference */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e65a2b;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex; /* Display history items in a row */
+    gap: 10px; /* Space between items */
+}
+
+li {
+    cursor: pointer;
+    padding: 5px 15px;
+    background: #ff6f3c; /* Orange background for items */
+    color: white; /* White text for items */
+    border-radius: 20px; /* Pill shape */
+    font-size: 14px;
+}
+
+li:hover {
+    background: #e65a2b;
+}
+
+/* --- Weather Info (Table) Styles --- */
+/* Base table structure */
+.weather-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Base row style with gray borders */
+.weather-table tr {
+    border-bottom: 1px solid #eee;
+}
+
+/* Base cell style */
+.weather-table td {
+    padding: 10px;
+}
+
+/* Left column style: faint orange border, fixed width */
+.weather-table td:first-child {
+    font-weight: bold;
+    color: #555;
+    border-left: 3px solid #ffccba; /* Faint orange border on the left */
+    width: 40%;
+}
+
+/* Right column style: centered text, grey border */
+.weather-table td:last-child {
+    text-align: right;
+    color: #000;
+}
